@@ -18,7 +18,7 @@ this will all change once I figure out how to actually package vagrant boxes
 10. Now you are ready to do `python3 manage.py syncdb`
 11. If successful, Django should ask you to install superusers. Say yes, and use a one-character username/password for ease.
 12. Now you can run `python3 manage.py runserver 0.0.0.0:8000`. This will be your go-to command when you develop.
-13. Visit `0.0.0.0:8765` in your server. You should now see the UPE website locally!
+13. Visit `0.0.0.0:8765` on your desktop in a browser or something. You should now see the UPE website locally!
   - Note that you will have to comment out the ALLOWED_HOSTS variable in `upe/settings.py`. Make sure not to commit changes to settings.py to the repo!
 14. Wrapping up: you can do Ctrl-C to stop the server, and then run `deactivate` in the terminal to stop the virtualenv.
 

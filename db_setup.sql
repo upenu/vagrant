@@ -1,0 +1,2 @@
+CREATE DATABASE upe_db;
+CREATE USER admin WITH PASSWORD 'littlewhale';

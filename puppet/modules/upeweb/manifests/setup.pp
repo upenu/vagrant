@@ -1,10 +1,10 @@
 class upeweb::setup {
-  vcsrepo { '/home/vagrant/website':
+  vcsrepo { $upeweb::webdir :
     ensure   => present,
     provider => git,
     source   => 'https://github.com/upenu/website.git',
-    user => 'vagrant',
-    group => 'vagrant',
+    user => $upeweb::cmd_user,
+    group => $upeweb::cmd_group,
   }
 
   file { '/var/upeweb':

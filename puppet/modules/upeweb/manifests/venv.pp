@@ -4,8 +4,8 @@ class upeweb::venv {
     source => 'puppet:///modules/upeweb/venv_setup.sh',
     path => '/var/upeweb/venv_setup.sh',
     mode => '0744',
-    owner => 'vagrant',
-    group => 'vagrant',
+    owner => $upeweb::cmd_user,
+    group => $upeweb::cmd_group,
   }
 
   file { 'venv_install':
@@ -13,8 +13,8 @@ class upeweb::venv {
     source => 'puppet:///modules/upeweb/venv_install.sh',
     path => '/var/upeweb/venv_install.sh',
     mode => '0744',
-    owner => 'vagrant',
-    group => 'vagrant',
+    owner => $upeweb::cmd_user,
+    group => $upeweb::cmd_group,
   }
 
   exec { 'install_venv':
@@ -28,6 +28,6 @@ class upeweb::venv {
     refreshonly => true,
     require => File['venv_install'],
     command => '/var/upeweb/venv_setup.sh',
-    user => 'vagrant',
+    user => $upeweb::cmd_user,
   }
 }

@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
   config.vm.network 'private_network', ip: '192.168.55.55'
 
   # Set up synced folder
-  config.vm.synced_folder "./website", "/home/vagrant/website"
+  config.vm.synced_folder "./upedev", "/home/vagrant/upedev"
 
   config.vm.provider 'virtualbox' do |vb|
     vb.name = 'UPE webdev'

@@ -9,6 +9,9 @@ Vagrant.configure(2) do |config|
   # Allow host-only access to machine
   config.vm.network 'private_network', ip: '192.168.55.55'
 
+  # Set up synced folder
+  config.vm.synced_folder "./website", "/home/vagrant/website"
+
   config.vm.provider 'virtualbox' do |vb|
     vb.name = 'UPE webdev'
     vb.gui = false

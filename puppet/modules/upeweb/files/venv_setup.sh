@@ -2,7 +2,7 @@
 # Sets up virtualenv in the UPE website directory
 # and installs dependent packages.
 
-HOMEDIR = /home/vagrant
+HOMEDIR=/home/vagrant
 WEBDIR=$HOMEDIR/website
 
 cd $WEBDIR
